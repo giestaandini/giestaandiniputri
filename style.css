@@ -103,10 +103,23 @@ nav a {
 .role {
   font-size: 1.2rem;
   font-weight: bold;
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
   white-space: nowrap;
-  margin-top: 0.5rem;
+  min-height: 1.5rem;     /* Tetap jaga tinggi */
+  min-width: 250px;       /* Tetap jaga lebar */
+  margin-top: 0;
+}
+
+.hero-text p:last-child {
+  margin-top: 0rem;
+}
+
+.intro {
+  margin-bottom: 0rem;
+}
+
+.hero-text h2 {
+  margin-top: 0;
   margin-bottom: 0rem;
 }
 
