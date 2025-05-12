@@ -63,8 +63,9 @@ nav a {
 
 .hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 9rem; /* atau 2rem, bebas mau seberapa dekat */
   padding: 5rem 2rem;
 }
 
@@ -163,7 +164,7 @@ nav a {
   .hero {
     flex-direction: column;
     text-align: center;
-    padding: 70px 20px 120px;
+    gap: 0rem;
   }
 
   .hero-image {
