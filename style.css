@@ -140,11 +140,13 @@ body.dark .hero-image img {
 }
 
 .cursor {
+  display: inline-block;
   width: 2px;
   height: 1.2em;
   background-color: var(--text-color);
   margin-left: 2px;
   animation: blink 0.7s infinite;
+  vertical-align: bottom;
 }
 
 @keyframes blink {
