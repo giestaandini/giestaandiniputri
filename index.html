@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="img/G.png">
+  <title>Halaman Home | Portofolio | Giesta Andini Putri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo animate-zoom">staap</h1>
+    <nav>
+      <ul class="nav-menu animate-zoom">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+      </ul>
+    </nav>
+    <button id="theme-toggle" class="animate-zoom" title="Toggle Theme">🌞</button>
+  </header>
+
+  <main class="hero">
+    <div class="hero-text animate-zoom">
+      <p class="intro">Hello World, I'm</p>
+      <h2>Giesta Andini</h2>
+      <p class="role"><span id="typing-text"></span><span class="cursor"></span></p>
+      <p>Welcome to My personal website.👋</p>
+    </div>
+    <div class="hero-image animate-zoom">
+      <img src="img/Me.jpg" alt="Landscape Illustration" />
+    </div>
+  </main>
+
+  <nav class="bottom-menu">
+    <a href="index.html" class="nav-link active animate-zoom">Home</a>
+    <a href="about.html" class="nav-link animate-zoom">About</a>
+    <a href="#portfolio" class="nav-link animate-zoom">Portfolio</a>
+    <a href="#blog" class="nav-link animate-zoom">Blog</a>
+  </nav>
+
+  <script src="script.js"></script>
+  <script>
+    const text = "Junior Web Programming";
+    const typingText = document.getElementById("typing-text");
+
+    let index = 0;
+    let isDeleting = false;
+
+    function typeWriter() {
+      if (!isDeleting && index <= text.length) {
+        typingText.textContent = text.substring(0, index);
+        index++;
+        setTimeout(typeWriter, 100);
+      } else if (isDeleting && index >= 0) {
+        typingText.textContent = text.substring(0, index);
+        index--;
+        setTimeout(typeWriter, 50);
+      } else {
+        isDeleting = !isDeleting;
+        setTimeout(typeWriter, isDeleting ? 2000 : 500); 
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+</body>
+</html>
