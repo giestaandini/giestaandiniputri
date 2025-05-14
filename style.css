@@ -112,7 +112,7 @@ nav a {
 }
 
 .hero-text p:last-child {
-  margin-top: -0.4rem;
+  margin-top: -0.3rem;
 }
 
 .intro {
@@ -162,7 +162,7 @@ nav a {
   .hero {
     flex-direction: column;
     text-align: center;
-    gap: 0rem;
+    gap: 1rem;
   }
 
   .hero-image {
