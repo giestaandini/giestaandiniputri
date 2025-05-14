@@ -81,7 +81,7 @@ nav a {
   margin-bottom: 0rem;
 }
 
-@keyframes glowPulse {
+@keyframes glowPulseLight {
   0%, 100% {
     transform: scale(1);
     box-shadow: 0 0 20px 5px #fdd835;
@@ -92,13 +92,28 @@ nav a {
   }
 }
 
+@keyframes glowPulseDark {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 5px #0097a7;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 10px #0097a7;
+  }
+}
+
 .hero-image img {
   margin-top: 3rem;
   width: 300px;
   height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  animation: glowPulse 2.5s ease-in-out infinite;
+  animation: glowPulseLight 2.5s ease-in-out infinite;
+}
+
+body.dark .hero-image img {
+  animation: glowPulseDark 2.5s ease-in-out infinite;
 }
 
 .role {
