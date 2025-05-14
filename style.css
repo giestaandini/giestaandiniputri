@@ -246,3 +246,116 @@ body.dark .hero-image img {
 .animate-zoom {
   animation: fadeZoom 1s ease-out forwards;
 }
+
+.about {
+  padding: 2rem 2rem;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.about-container {
+  background-color: var(--nav-bg);
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.about-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.about-heading h2 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.line {
+  width: 350px;
+  height: 3px;
+  background-color: var(--highlight);
+  border-radius: 2px;
+}
+
+.about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #fdd835;
+  padding: 6px;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text p {
+  color: white;
+  line-height: 1.6;
+  text-align: justify;
+  margin-bottom: 1rem;
+}
+
+.cv-button {
+  background-color: #fdd835;
+  color: #000;
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.cv-button:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .about-heading {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .line {
+    width: 100px; /* garis kuning lebih pendek di mobile */
+    margin-left: 0;
+  }
+
+  .about-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    text-align: center;  /* atau center kalau kamu mau rapi di mobile */
+  }
+
+}
