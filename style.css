@@ -81,41 +81,6 @@ nav a {
   margin-bottom: 0rem;
 }
 
-@keyframes glowPulseLight {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 20px 5px #fdd835;
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px 10px #fdd835;
-  }
-}
-
-@keyframes glowPulseDark {
-  0%, 100% {
-    transform: scale(1);
-    box-shadow: 0 0 20px 5px #0097a7;
-  }
-  50% {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px 10px #0097a7;
-  }
-}
-
-.hero-image img {
-  margin-top: 3rem;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 50%;
-  animation: glowPulseLight 2.5s ease-in-out infinite;
-}
-
-body.dark .hero-image img {
-  animation: glowPulseDark 2.5s ease-in-out infinite;
-}
-
 .role {
   font-size: 1.2rem;
   font-weight: bold;
@@ -180,15 +145,13 @@ body.dark .hero-image img {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    padding: 1rem; 
   }
-
-  .hero-image {
+  
+  .photo-flip-container {
     order: -1; 
-  }
-
-  .hero-image img {
-    width: 200px;
-    height: 200px;
+    width: 200px !important;
+    height: 200px !important;
     margin: 0;
   }
 
@@ -304,6 +267,74 @@ body.dark .hero-image img {
 .about-image img:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes glowPulseLight {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 5px #fdd835;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 10px #fdd835;
+  }
+}
+
+@keyframes glowPulseDark {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px 5px #0097a7;
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 10px #0097a7;
+  }
+}
+
+.photo-flip-container {
+  margin-top: 3rem;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: glowPulseLight 2.5s ease-in-out infinite;
+}
+
+body.dark .photo-flip-container {
+  animation: glowPulseDark 2.5s ease-in-out infinite;
+}
+
+.photo-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.photo-flip-container.flipped .photo-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.photo-flip-inner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  backface-visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.photo-front {
+  z-index: 2;
+}
+
+.photo-back {
+  transform: rotateY(180deg);
+  z-index: 1;
 }
 
 .about-text {
