@@ -145,7 +145,7 @@ nav a {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
-    padding: 1rem; 
+    padding: 2rem; 
   }
   
   .photo-flip-container {
