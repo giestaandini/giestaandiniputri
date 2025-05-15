@@ -140,6 +140,61 @@ nav a {
   display: none;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem; 
+  }
+  
+  .photo-flip-container {
+    order: -1; 
+    width: 200px !important;
+    height: 200px !important;
+    margin: 0;
+  }
+
+  .hero-text {
+    margin-top: 1rem;
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    gap: 0; 
+  }
+
+  nav ul.nav-menu {
+    display: none; 
+  }
+
+  .bottom-menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.75rem 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg);
+    z-index: 999;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+
+  .bottom-menu .nav-link {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .bottom-menu .nav-link.active {
+    color: #ffffff;
+    border-bottom: 2px solid var(--highlight);
+  }
+}
+
 @keyframes fadeZoom {
   0% {
     opacity: 0;
@@ -311,61 +366,7 @@ body.dark .photo-flip-container {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    padding: 2rem; 
-  }
-  
-  .photo-flip-container {
-    order: -1; 
-    width: 200px !important;
-    height: 200px !important;
-    margin: 0;
-  }
-
-  .hero-text {
-    margin-top: 1rem;
-  }
-
-  header {
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    gap: 0; 
-  }
-
-  nav ul.nav-menu {
-    display: none; 
-  }
-
-  .bottom-menu {
-    display: flex;
-    justify-content: space-around;
-    padding: 0.75rem 1rem;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--nav-bg);
-    z-index: 999;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-  }
-
-  .bottom-menu .nav-link {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-size: 0.9rem;
-  }
-
-  .bottom-menu .nav-link.active {
-    color: #ffffff;
-    border-bottom: 2px solid var(--highlight);
-  }
-
   .about-content {
     gap: 0rem;
     flex-direction: column;
@@ -397,4 +398,5 @@ body.dark .photo-flip-container {
   .about-text p {
     text-align: center;
   }
+
 }
