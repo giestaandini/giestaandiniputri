@@ -386,7 +386,7 @@ body.dark .photo-flip-container {
   }
 
   .line {
-    gap: -0.7rem;
+    margin-top: -10px;
     width: 100px; 
     margin-left: 0;
   }
