@@ -298,6 +298,12 @@ body.dark .hero-image img {
   border-radius: 50%;
   background-color: #fdd835;
   padding: 6px;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -329,13 +335,14 @@ body.dark .hero-image img {
 
 @media (max-width: 768px) {
   .about-content {
-    gap: 0.5rem;
+    gap: 0rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .about-image img {
+    gap: -0.7rem;
     width: 150px;
     height: 150px;
   }
@@ -346,6 +353,7 @@ body.dark .hero-image img {
   }
 
   .line {
+    gap: -0.7rem;
     width: 100px; 
     margin-left: 0;
   }
